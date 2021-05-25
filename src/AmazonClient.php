@@ -1,10 +1,10 @@
 <?php
 
-namespace Revolution\Amazon\ProductAdvertising;
+namespace Orzcc\Amazon\ProductAdvertising;
 
 use Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\api\DefaultApi;
 use Illuminate\Support\Traits\Macroable;
-use Revolution\Amazon\ProductAdvertising\Contracts\Factory;
+use Orzcc\Amazon\ProductAdvertising\Contracts\Factory;
 
 class AmazonClient implements Factory
 {

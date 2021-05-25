@@ -4,6 +4,10 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d835c616dc9f95faf516/maintainability)](https://codeclimate.com/github/kawax/laravel-amazon-product-api/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d835c616dc9f95faf516/test_coverage)](https://codeclimate.com/github/kawax/laravel-amazon-product-api/test_coverage)
 
+## Updated
+
+forked from ![kawax/laravel-amazon-product-api](https://github.com/kawax/laravel-amazon-product-api)
+
 ## End of active support (2020/06)
 My API account has been banned, so my active support is over. However, PR is accepted.
 
@@ -20,7 +24,7 @@ My API account has been banned, so my active support is over. However, PR is acc
 
 ### Composer
 ```
-composer require revolution/laravel-amazon-product-api
+composer require orzcc/laravel-amazon-product-api
 ```
 
 ### Publishing config (Optional)
@@ -47,7 +51,7 @@ https://webservices.amazon.com/paapi5/documentation/common-request-parameters.ht
 
 ```php
 <?php
-use Revolution\Amazon\ProductAdvertising\Facades\AmazonProduct;
+use Orzcc\Amazon\ProductAdvertising\Facades\AmazonProduct;
 
 # string $category, string $keyword = null, int $page = 1
 $response = AmazonProduct::search('All', 'amazon' , 1);

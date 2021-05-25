@@ -1,9 +1,9 @@
 <?php
 
-namespace Revolution\Amazon\ProductAdvertising\Tests;
+namespace Orzcc\Amazon\ProductAdvertising\Tests;
 
-use Revolution\Amazon\ProductAdvertising\Facades\AmazonProduct;
-use Revolution\Amazon\ProductAdvertising\Providers\AmazonProductServiceProvider;
+use Orzcc\Amazon\ProductAdvertising\Facades\AmazonProduct;
+use Orzcc\Amazon\ProductAdvertising\Providers\AmazonProductServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

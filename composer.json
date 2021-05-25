@@ -1,5 +1,5 @@
 {
-  "name": "revolution/laravel-amazon-product-api",
+  "name": "orzcc/laravel-amazon-product-api",
   "description": "Amazon Product Advertising API for Laravel",
   "keywords": [
     "amazon",
@@ -16,28 +16,28 @@
   },
   "autoload": {
     "psr-4": {
-      "Revolution\\Amazon\\ProductAdvertising\\": "src/",
+      "Orzcc\\Amazon\\ProductAdvertising\\": "src/",
       "Amazon\\ProductAdvertisingAPI\\v1\\": "paapi5-php-sdk/src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Revolution\\Amazon\\ProductAdvertising\\Tests\\": "tests/"
+      "Orzcc\\Amazon\\ProductAdvertising\\Tests\\": "tests/"
     }
   },
   "authors": [
     {
-      "name": "kawax",
-      "email": "kawaxbiz@gmail.com"
+      "name": "orzcc",
+      "email": "orzcczh@gmail.com"
     }
   ],
   "extra": {
     "laravel": {
       "providers": [
-        "Revolution\\Amazon\\ProductAdvertising\\Providers\\AmazonProductServiceProvider"
+        "Orzcc\\Amazon\\ProductAdvertising\\Providers\\AmazonProductServiceProvider"
       ],
       "aliases": {
-        "AmazonProduct": "Revolution\\Amazon\\ProductAdvertising\\Facades\\AmazonProduct"
+        "AmazonProduct": "Orzcc\\Amazon\\ProductAdvertising\\Facades\\AmazonProduct"
       }
     }
   }

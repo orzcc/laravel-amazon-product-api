@@ -1,6 +1,6 @@
 <?php
 
-namespace Revolution\Amazon\ProductAdvertising\Concerns;
+namespace Orzcc\Amazon\ProductAdvertising\Concerns;
 
 use Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetItemsRequest;
 use Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetItemsResource;

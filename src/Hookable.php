@@ -1,6 +1,6 @@
 <?php
 
-namespace Revolution\Amazon\ProductAdvertising;
+namespace Orzcc\Amazon\ProductAdvertising;
 
 trait Hookable
 {

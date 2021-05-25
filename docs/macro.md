@@ -9,7 +9,7 @@ Extend any method by your self.
 use Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\api\DefaultApi;
 use Amazon\ProductAdvertisingAPI\v1\Configuration;
 use GuzzleHttp\Client;
-use Revolution\Amazon\ProductAdvertising\Facades\AmazonProduct;
+use Orzcc\Amazon\ProductAdvertising\Facades\AmazonProduct;
 
 //...
 
