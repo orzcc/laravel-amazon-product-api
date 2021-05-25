@@ -6,7 +6,7 @@
 
 ## Updated
 
-forked from ![kawax/laravel-amazon-product-api](https://github.com/kawax/laravel-amazon-product-api)
+forked from [kawax/laravel-amazon-product-api](https://github.com/kawax/laravel-amazon-product-api)
 
 ## End of active support (2020/06)
 My API account has been banned, so my active support is over. However, PR is accepted.
