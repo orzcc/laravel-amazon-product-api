@@ -21,49 +21,41 @@ use \ArrayAccess;
 use \Amazon\ProductAdvertisingAPI\v1\ObjectSerializer;
 
 /**
- * OfferCondition Class Doc Comment
+ * OfferConditionNote Class Doc Comment
  *
  * @category Class
  * @package  Amazon\ProductAdvertisingAPI\v1
  * @author   Product Advertising API team
  */
-class OfferCondition implements ModelInterface, ArrayAccess
+class OfferConditionNote implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
     /**
-     * The original name of the model.
-     *
-     * @var string
-     */
-    protected static $swaggerModelName = 'OfferCondition';
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'OfferConditionNote';
 
     /**
-     * Array of property to type mappings. Used for (de)serialization
-     *
-     * @var string[]
-     */
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
     protected static $swaggerTypes = [
-        'displayValue' => 'string',
-        'label' => 'string',
         'locale' => 'string',
-        'value' => 'string',
-        'subCondition' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferSubCondition',
-        'conditionNote' => '\Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferConditionNote'
+        'value' => 'string'
     ];
 
     /**
-     * Array of property to format mappings. Used for (de)serialization
-     *
-     * @var string[]
-     */
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
     protected static $swaggerFormats = [
-        'displayValue' => null,
-        'label' => null,
         'locale' => null,
-        'value' => null,
-        'subCondition' => null,
-        'conditionNote' => null
+        'value' => null
     ];
 
     /**
@@ -93,12 +85,8 @@ class OfferCondition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'displayValue' => 'DisplayValue',
-        'label' => 'Label',
         'locale' => 'Locale',
-        'value' => 'Value',
-        'subCondition' => 'SubCondition',
-        'conditionNote' => 'ConditionNote'
+        'value' => 'Value'
     ];
 
     /**
@@ -107,12 +95,8 @@ class OfferCondition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'displayValue' => 'setDisplayValue',
-        'label' => 'setLabel',
         'locale' => 'setLocale',
-        'value' => 'setValue',
-        'subCondition' => 'setSubCondition',
-        'conditionNote' => 'setConditionNote'
+        'value' => 'setValue'
     ];
 
     /**
@@ -121,12 +105,8 @@ class OfferCondition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'displayValue' => 'getDisplayValue',
-        'label' => 'getLabel',
         'locale' => 'getLocale',
-        'value' => 'getValue',
-        'subCondition' => 'getSubCondition',
-        'conditionNote' => 'getConditionNote'
+        'value' => 'getValue'
     ];
 
     /**
@@ -170,9 +150,9 @@ class OfferCondition implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    
 
-
-
+    
 
     /**
      * Associative array for storing property values
@@ -189,12 +169,8 @@ class OfferCondition implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['displayValue'] = isset($data['displayValue']) ? $data['displayValue'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['subCondition'] = isset($data['subCondition']) ? $data['subCondition'] : null;
-        $this->container['conditionNote'] = isset($data['conditionNote']) ? $data['conditionNote'] : null;
     }
 
     /**
@@ -220,54 +196,6 @@ class OfferCondition implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets displayValue
-     *
-     * @return string
-     */
-    public function getDisplayValue()
-    {
-        return $this->container['displayValue'];
-    }
-
-    /**
-     * Sets displayValue
-     *
-     * @param string $displayValue displayValue
-     *
-     * @return $this
-     */
-    public function setDisplayValue($displayValue)
-    {
-        $this->container['displayValue'] = $displayValue;
-
-        return $this;
-    }
-
-    /**
-     * Gets label
-     *
-     * @return string
-     */
-    public function getLabel()
-    {
-        return $this->container['label'];
-    }
-
-    /**
-     * Sets label
-     *
-     * @param string $label label
-     *
-     * @return $this
-     */
-    public function setLabel($label)
-    {
-        $this->container['label'] = $label;
-
-        return $this;
-    }
 
     /**
      * Gets locale
@@ -313,54 +241,6 @@ class OfferCondition implements ModelInterface, ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * Gets subCondition
-     *
-     * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferSubCondition
-     */
-    public function getSubCondition()
-    {
-        return $this->container['subCondition'];
-    }
-
-    /**
-     * Sets subCondition
-     *
-     * @param \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferSubCondition $subCondition subCondition
-     *
-     * @return $this
-     */
-    public function setSubCondition($subCondition)
-    {
-        $this->container['subCondition'] = $subCondition;
-
-        return $this;
-    }
-
-    /**
-     * Gets conditionNote
-     *
-     * @return \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferConditionNote
-     */
-    public function getConditionNote()
-    {
-        return $this->container['conditionNote'];
-    }
-
-    /**
-     * Sets conditionNote
-     *
-     * @param \Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\OfferConditionNote $conditionNote conditionNote
-     *
-     * @return $this
-     */
-    public function setConditionNote($conditionNote)
-    {
-        $this->container['conditionNote'] = $conditionNote;
 
         return $this;
     }
@@ -434,3 +314,5 @@ class OfferCondition implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+
