@@ -32,6 +32,7 @@ trait Item
         $request->setItemIds($asin);
         $request->setPartnerTag(Config::get('amazon-product.associate_tag'));
         $request->setPartnerType(PartnerType::ASSOCIATES);
+        $request->setMarketplace(Config::get('amazon-product.marketplace'));
         $request->setItemIdType($this->idType);
         $request->setResources($resources);
 

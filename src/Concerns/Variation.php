@@ -25,6 +25,7 @@ trait Variation
         $request->setVariationPage($page);
         $request->setPartnerTag(Config::get('amazon-product.associate_tag'));
         $request->setPartnerType(PartnerType::ASSOCIATES);
+        $request->setMarketplace(Config::get('amazon-product.marketplace'));
         $request->setResources($resources);
 
         $request = $this->callHook('variations', $request);

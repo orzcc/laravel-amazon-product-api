@@ -30,6 +30,11 @@ trait Search
             $request->setPartnerTag(Config::get('amazon-product.associate_tag'));
         }
         $request->setPartnerType(PartnerType::ASSOCIATES);
+        if (isset($searchOptions['marketplace'])) {
+            $request->setMarketplace($searchOptions['marketplace']);
+        } else {
+            $request->setMarketplace(Config::get('amazon-product.marketplace'));
+        }
         $request->setResources($resources);
 
         // Other Search Options
@@ -65,9 +70,6 @@ trait Search
         }
         if (isset($searchOptions['languagesOfPreference'])) {
             $request->setLanguagesOfPreference($searchOptions['languagesOfPreference']);
-        }
-        if (isset($searchOptions['marketplace'])) {
-            $request->setMarketplace($searchOptions['marketplace']);
         }
         if (isset($searchOptions['maxPrice'])) {
             $request->setMaxPrice($searchOptions['maxPrice']);

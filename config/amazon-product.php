@@ -6,4 +6,5 @@ return [
     'associate_tag'  => env('AMAZON_ASSOCIATE_TAG', ''),
     'host'           => env('AMAZON_HOST', 'webservices.amazon.co.jp'),
     'region'         => env('AMAZON_REGION', 'us-west-2'),
+    'marketplace'    => env('AMAZON_MARKETPLACE', 'www.amazon.com')
 ];
