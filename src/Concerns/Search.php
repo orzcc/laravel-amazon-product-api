@@ -35,6 +35,16 @@ trait Search
         } else {
             $request->setMarketplace(Config::get('amazon-product.marketplace'));
         }
+        if (isset($searchOptions['languagesOfPreference'])) {
+            $request->setLanguagesOfPreference($searchOptions['languagesOfPreference']);
+        } else {
+            $request->setLanguagesOfPreference(Config::get('amazon-product.language'));
+        }
+        if (isset($searchOptions['currencyOfPreference'])) {
+            $request->setCurrencyOfPreference($searchOptions['currencyOfPreference']);
+        } else {
+            $request->setCurrencyOfPreference(Config::get('amazon-product.currency'));
+        }
         $request->setResources($resources);
 
         // Other Search Options
@@ -59,17 +69,12 @@ trait Search
         if (isset($searchOptions['condition'])) {
             $request->setCondition($searchOptions['condition']);
         }
-        if (isset($searchOptions['currencyOfPreference'])) {
-            $request->setCurrencyOfPreference($searchOptions['currencyOfPreference']);
-        }
+
         if (isset($searchOptions['deliveryFlags'])) {
             $request->setDeliveryFlags($searchOptions['deliveryFlags']);
         }
         if (isset($searchOptions['itemCount'])) {
             $request->setItemCount($searchOptions['itemCount']);
-        }
-        if (isset($searchOptions['languagesOfPreference'])) {
-            $request->setLanguagesOfPreference($searchOptions['languagesOfPreference']);
         }
         if (isset($searchOptions['maxPrice'])) {
             $request->setMaxPrice($searchOptions['maxPrice']);

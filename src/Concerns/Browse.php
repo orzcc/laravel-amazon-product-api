@@ -25,6 +25,7 @@ trait Browse
         $request->setPartnerTag(Config::get('amazon-product.associate_tag'));
         $request->setPartnerType(PartnerType::ASSOCIATES);
         $request->setMarketplace(Config::get('amazon-product.marketplace'));
+        $request->setLanguagesOfPreference(Config::get('amazon-product.language'));
         $request->setResources($resources);
 
         $request = $this->callHook('browse', $request);
