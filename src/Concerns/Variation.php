@@ -26,8 +26,6 @@ trait Variation
         $request->setPartnerTag(Config::get('amazon-product.associate_tag'));
         $request->setPartnerType(PartnerType::ASSOCIATES);
         $request->setMarketplace(Config::get('amazon-product.marketplace'));
-        $request->setLanguagesOfPreference(Config::get('amazon-product.language'));
-        $request->setCurrencyOfPreference(Config::get('amazon-product.currency'));
         $request->setResources($resources);
 
         $request = $this->callHook('variations', $request);

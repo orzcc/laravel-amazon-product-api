@@ -36,14 +36,10 @@ trait Search
             $request->setMarketplace(Config::get('amazon-product.marketplace'));
         }
         if (isset($searchOptions['languagesOfPreference'])) {
-            $request->setLanguagesOfPreference($searchOptions['languagesOfPreference']);
-        } else {
-            $request->setLanguagesOfPreference(Config::get('amazon-product.language'));
+            $request->setLanguagesOfPreference([$searchOptions['languagesOfPreference']]);
         }
         if (isset($searchOptions['currencyOfPreference'])) {
             $request->setCurrencyOfPreference($searchOptions['currencyOfPreference']);
-        } else {
-            $request->setCurrencyOfPreference(Config::get('amazon-product.currency'));
         }
         $request->setResources($resources);
 
