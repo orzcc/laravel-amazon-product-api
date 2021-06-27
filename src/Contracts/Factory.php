@@ -43,7 +43,7 @@ interface Factory
      * @return mixed
      * @throws ApiException
      */
-    public function browse(string $node, string $sort = 'TopSellers');
+    public function browse(array $nodeIds, string $sort = 'TopSellers');
 
     /**
      * @param  string  $asin

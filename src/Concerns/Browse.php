@@ -13,7 +13,7 @@ trait Browse
     /**
      * {@inheritdoc}
      */
-    public function browse(string $node, string $sort = 'TopSellers')
+    public function browse(array $nodeIds, string $sort = 'TopSellers')
     {
         /**
          * @var GetBrowseNodesResource[] $resources
@@ -21,7 +21,7 @@ trait Browse
         $resources = GetBrowseNodesResource::getAllowableEnumValues();
 
         $request = new GetBrowseNodesRequest();
-        $request->setBrowseNodeIds([$node]);
+        $request->setBrowseNodeIds($nodeIds);
         $request->setPartnerTag(Config::get('amazon-product.associate_tag'));
         $request->setPartnerType(PartnerType::ASSOCIATES);
         $request->setMarketplace(Config::get('amazon-product.marketplace'));
