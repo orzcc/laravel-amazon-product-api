@@ -13,7 +13,7 @@ trait Browse
     /**
      * {@inheritdoc}
      */
-    public function browse(array $nodeIds, string $sort = 'TopSellers')
+    public function browse(array $nodeIds, string $sort = 'TopSellers', array $searchOptions = [])
     {
         /**
          * @var GetBrowseNodesResource[] $resources
@@ -25,6 +25,9 @@ trait Browse
         $request->setPartnerTag(Config::get('amazon-product.associate_tag'));
         $request->setPartnerType(PartnerType::ASSOCIATES);
         $request->setMarketplace(Config::get('amazon-product.marketplace'));
+        if (isset($searchOptions['languagesOfPreference'])) {
+            $request->setLanguagesOfPreference([$searchOptions['languagesOfPreference']]);
+        }
         $request->setResources($resources);
 
         $request = $this->callHook('browse', $request);
