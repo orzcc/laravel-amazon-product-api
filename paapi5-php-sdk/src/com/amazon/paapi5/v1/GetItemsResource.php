@@ -89,7 +89,7 @@ class GetItemsResource
     const RENTAL_OFFERSLISTINGSDELIVERY_INFOIS_PRIME_ELIGIBLE = 'RentalOffers.Listings.DeliveryInfo.IsPrimeEligible';
     const RENTAL_OFFERSLISTINGSDELIVERY_INFOSHIPPING_CHARGES = 'RentalOffers.Listings.DeliveryInfo.ShippingCharges';
     const RENTAL_OFFERSLISTINGSMERCHANT_INFO = 'RentalOffers.Listings.MerchantInfo';
-
+    
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -159,3 +159,5 @@ class GetItemsResource
         ];
     }
 }
+
+

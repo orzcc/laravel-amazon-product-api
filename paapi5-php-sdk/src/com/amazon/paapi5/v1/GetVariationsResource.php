@@ -92,7 +92,7 @@ class GetVariationsResource
     const VARIATION_SUMMARYPRICEHIGHEST_PRICE = 'VariationSummary.Price.HighestPrice';
     const VARIATION_SUMMARYPRICELOWEST_PRICE = 'VariationSummary.Price.LowestPrice';
     const VARIATION_SUMMARYVARIATION_DIMENSION = 'VariationSummary.VariationDimension';
-
+    
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -165,3 +165,5 @@ class GetVariationsResource
         ];
     }
 }
+
+
